@@ -20,6 +20,24 @@
       padding: 30px;
       text-align: center;
     }
+
+    .candys {
+      margin-bottom: 50px;
+    }
+
+    input {
+      visibility: hidden;
+    }
+
+    label img {
+      transition: all linear 0.1s;
+      opacity: 0.7;
+    }
+
+    input:checked~img {
+      transform: scale(1.2);
+      opacity: 1;
+    }
   </style>
 
 </head>
@@ -28,26 +46,23 @@
     <h1>キャンディーをえらんでね</h1>
     <div class="candys">
       <form action="#" name="candy">
-        <label for="candy1"><img src="../images/candy.png" alt=""><input type="radio" id="candy1" name="candy" value="1"></label>
-        <label for="candy2"><img src="../images/candy.png" alt=""><input type="radio" id="candy2" name="candy" value="2"></label>
-        <label for="candy3"><img src="../images/candy.png" alt=""><input type="radio" id="candy3" name="candy" value="3"></label>
+        <label for="candy1"><input type="radio" id="candy1" name="candy" value="1"><img src="../images/candy.png" alt=""></label>
+        <label for="candy2"><input type="radio" id="candy2" name="candy" value="2"><img src="../images/candy.png" alt=""></label>
+        <label for="candy3"><input type="radio" id="candy3" name="candy" value="3"><img src="../images/candy.png" alt=""></label>
       </form>
     </div>
     <a href="../animation/" class="button uk-button uk-button-default uk-button-large" id="submit">これにする</a>
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script>
-  $('#submit').on('click', function(){
-    if(document.forms.candy.candy.value) {
-      return true;
-    } else {
-      alert ('キャンディーをえらんでね');
-      return false;
-    }
-  });
+    $('#submit').on('click', function () {
+      if (document.forms.candy.candy.value) {
+        return true;
+      } else {
+        alert('キャンディーをえらんでね');
+        return false;
+      }
+    });
   </script>
 </body>
 </html>
