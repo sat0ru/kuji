@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハロウィーンパーティくじ</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/css/uikit.min.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .wrapper img {
+      max-width: 100%;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <img src="../images/candys.gif" alt="">
+  </div>
+  <script>
+    function selection() {
+      setTimeout(7000, function(){
+        var min = 1 ;
+        var max = 2 ;
+        var a = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+        switch(a){
+          case 1 :
+            location.href = "../atari/";
+            break;
+          case 2 :
+            location.href = "../batsu/";
+            break;
+          default:
+            alert('エラーが発生しました！さいしょから');
+            location.href = "../";
+            break;
+        }
+      });
+    }
+    window.addEventListener('load', serection(), false);
+  </script>
+</body>
+</html>
