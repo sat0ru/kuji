@@ -24,7 +24,17 @@
 </head>
 <body>
   <div class="wrapper">
-    <img src="../images/candys.gif" alt="">
+    <script>
+      var date1 = new Date();
+      var date2 = date1.getFullYear() +
+        (date1.getMonth() + 1) +
+        date1.getDate() +
+        date1.getHours() +
+        date1.getMinutes() +
+        date1.getSeconds() +
+        date1.getMilliseconds();
+      document.write('<img src="../images/candys.gif?' + date2 + '" alt="">')
+    </script>
   </div>
   <script>
     function selection() {
