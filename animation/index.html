@@ -28,25 +28,26 @@
   </div>
   <script>
     function selection() {
-      setTimeout(7000, function(){
-        var min = 1 ;
-        var max = 2 ;
-        var a = Math.floor( Math.random() * (max + 1 - min) ) + min ;
-        switch(a){
-          case 1 :
+      setTimeout(function () {
+        var min = 1;
+        var max = 2;
+        var a = Math.floor(Math.random() * (max + 1 - min)) + min;
+        switch (a) {
+          case 1:
             location.href = "../atari/";
             break;
-          case 2 :
-            location.href = "../batsu/";
+          case 2:
+            location.href = "../hazure/";
             break;
           default:
             alert('エラーが発生しました！さいしょから');
             location.href = "../";
             break;
         }
-      });
+      }, 7000);
     }
-    window.addEventListener('load', selection(), false);
+    //    window.addEventListener('load', selection, false);
+    selection()
   </script>
 </body>
 </html>
