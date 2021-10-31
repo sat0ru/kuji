@@ -27,11 +27,27 @@
   <div class="wrapper">
     <h1>キャンディーをえらんでね</h1>
     <div class="candys">
-      <label for="candy1"><img src="../images/candy.png" alt=""><input type="radio" id="candy1" name="candy" value="1"></label>
-      <label for="candy2"><img src="../images/candy.png" alt=""><input type="radio" id="candy2" name="candy" value="2"></label>
-      <label for="candy3"><img src="../images/candy.png" alt=""><input type="radio" id="candy3" name="candy" value="3"></label>
+      <form action="#" name="candy">
+        <label for="candy1"><img src="../images/candy.png" alt=""><input type="radio" id="candy1" name="candy" value="1"></label>
+        <label for="candy2"><img src="../images/candy.png" alt=""><input type="radio" id="candy2" name="candy" value="2"></label>
+        <label for="candy3"><img src="../images/candy.png" alt=""><input type="radio" id="candy3" name="candy" value="3"></label>
+      </form>
     </div>
-    <a href="../animation/" class="button uk-button uk-button-default uk-button-large">これにする</a>
+    <a href="../animation/" class="button uk-button uk-button-default uk-button-large" id="submit">これにする</a>
   </div>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script>
+  $('#submit').on('click', function(){
+    if(document.forms.candy.candy.value) {
+      return true;
+    } else {
+      alert ('キャンディーをえらんでね');
+      return false;
+    }
+  });
+  </script>
 </body>
 </html>
